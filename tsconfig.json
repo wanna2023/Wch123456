@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "esnext",                      // 编译目标
+    "module": "ESNext",                    // 模块系统
+    "strict": true,                          // 启用所有严格类型检查选项
+    "jsx": "react-jsx",                      // JSX 代码生成
+    "moduleResolution": "node",              // 模块解析策略
+    "esModuleInterop": true,                 // 允许默认导入非模块
+    "skipLibCheck": true,                    // 跳过库文件检查
+    "forceConsistentCasingInFileNames": true, // 强制文件名一致性
+    "baseUrl": ".",                     // 基础路径
+    "paths": {
+      "@/*": ["./src/*"]                           // 路径映射
+    },
+    "typeRoots": [
+      "./node_modules/@types",                // 默认类型声明目录
+      "src/element-plus-icons.d.ts"                           // 自定义类型声明目录
+    ]
+  },
+  "files": [],                               // 可以指定要编译的文件
+  "references": [
+    { "path": "./tsconfig.app.json" },      // 引用应用程序配置
+    { "path": "./tsconfig.node.json" }       // 引用节点配置
+  ],
+  "include": ["src/**/*"],                   // 包括 src 目录下的所有文件
+  "exclude": ["node_modules", "**/*.spec.ts"] // 排除 node_modules 和测试文件
+}
